@@ -4,11 +4,11 @@ void main()
 {
     int n=5,k,i,j=4,num[5]={0,0,0,0,0};
     int get=0;
-    for(i=0 ; i<n-1 ; i++)
+    for(i=0 ; i<n ; i++)
     {
         for(k=0 ; k<j ; k++)
         {
-            scanf("%d ",&get);
+            scanf("%d",&get);
             num[i]=num[i]+get;
         }
     }
