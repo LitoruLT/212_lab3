@@ -3,15 +3,27 @@
 void main()
 {
 
-    unsigned long long n,check,i;
+    unsigned long n,check,i,ntc;
     char ans='F';
-        scanf("%llu",&n);
+        scanf("%lu",&n);
     check=n;
     while(ans!='T')
     {
         for(i=2; i<check ; i++)
         {
-            if(check%i==0)
+            for(ntc=2; ntc<i ; ntc++)
+            {
+                if(ntc*ntc<=i && i%ntc!=0)
+                {
+                    continue;
+                }
+                else
+                    {
+                        i++;
+                        break;
+                    }
+            }
+            if(i*i<=check && check%i==0)
             {
                 ans='F';
                 break;
@@ -21,6 +33,6 @@ void main()
         }
         check=check-1;
     }
-    printf("%d",check+1);
+    printf("%lu",check+1);
 
 }
