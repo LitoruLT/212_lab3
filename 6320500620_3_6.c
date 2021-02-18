@@ -40,7 +40,7 @@ unsigned long firststep(unsigned long n)
 
 void main()
 {
-    unsigned long n,num,mul=10,tmp=0;
+    unsigned long n,num,mul=10,tmpsave=0;
     scanf("%lu",&n);
     char ispalin='F';
     while(ans=='F')
@@ -50,16 +50,17 @@ void main()
         while(num)
         {
             num=num/mul;
-            tmp++;
+            tmpsave++;
         }
-        unsigned long tocheck[tmp];
+        unsigned long tocheck[tmpsave],i,tmp=tmpsave;
         num=n;
         while(num)
         {
             tocheck[tmp-1]=num%mul
             num=num/mul;
-            tmp=tmp-1
+            tmp=tmp-1;
         }
+        for(i=0 ; i<=tmp/2)
 
 
     }
