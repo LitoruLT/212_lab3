@@ -4,6 +4,9 @@ void main()
 {
     int n,di=2;
     scanf("%d",&n);
+    if(n==1)
+        printf("1\n");
+    else
     while(n>=di)
     {
         if(n%di==0)
@@ -16,4 +19,5 @@ void main()
 
     }
     printf("0");
+
 }
