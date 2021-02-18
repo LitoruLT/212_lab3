@@ -7,32 +7,36 @@ void main()
     char ans='F';
         scanf("%lu",&n);
     check=n;
-    while(ans!='T')
+    if(check>3)
     {
-        for(i=2; i<check ; i++)
+    while(ans=='F')
+    {
+        if(check%2==0)
+            check=check-1;
+        for(i=2; i*i<check ; i++)
         {
-            for(ntc=2; ntc<i ; ntc++)
+            if(check%i!=0)
             {
-                if(ntc*ntc<=i && i%ntc!=0)
-                {
-                    continue;
-                }
-                else
-                    {
-                        i++;
-                        break;
-                    }
+                ans='T';
             }
-            if(i*i<=check && check%i==0)
+            else
             {
                 ans='F';
                 break;
             }
-            else
-                ans='T';
+
         }
         check=check-1;
+
     }
-    printf("%lu",check+1);
+    }
+    else
+    {
+        check=check-1;
+    }
+
+    if(check>0)
+        printf("%lu",check+1);
+
 
 }
